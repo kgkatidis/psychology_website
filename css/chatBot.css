@@ -1,0 +1,138 @@
+#chatbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: system-ui, sans-serif;
+  z-index: 9999;
+}
+
+/* Chat bubble */
+#chatbot-toggle {
+  background: #2ecc71; /* πράσινο */
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background 0.2s;
+}
+#chatbot-toggle:hover {
+  transform: scale(1.1);
+  background: #27ae60;
+}
+
+/* Chat window */
+#chatbot-box {
+  width: 300px;
+  height: 420px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+#chatbot-header {
+  background: #27ae60; /* πράσινο */
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatbot-close {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Messages */
+#chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.bot-msg {
+  background: #e8f7ef; /* πολύ ανοιχτό πράσινο */
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  max-width: 80%;
+  border-left: 3px solid #2ecc71;
+}
+
+.user-msg {
+  background: #2ecc71; /* πράσινο */
+  color: white;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  max-width: 80%;
+  margin-left: auto;
+}
+
+/* Quick reply buttons */
+#chatbot-quick {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-top: 1px solid #ddd;
+}
+
+#chatbot-quick button {
+  background: #eef9f2; /* ανοιχτό πράσινο */
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+#chatbot-quick button:hover {
+  background: #d8f3e4; /* πιο έντονο ανοιχτό πράσινο */
+}
+
+/* Input area */
+#chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chatbot-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+#chatbot-send {
+  background: #27ae60; /* πράσινο */
+  color: white;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#chatbot-send:hover {
+  background: #1e874b; /* πιο σκούρο πράσινο */
+}
