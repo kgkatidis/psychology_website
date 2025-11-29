@@ -9805,3 +9805,38 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    .heading-section .title {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    
+    .heading-section .subtitle {
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 1.3;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    
+    /* Tablets */
+    @media (max-width: 992px) {
+      .heading-section .title { font-size: 1.8rem; text-align: center; }
+      .heading-section .subtitle { font-size: 1.3rem; text-align: center; }
+    }
+    
+    /* Κινητά */
+    @media (max-width: 576px) {
+      .heading-section .title { font-size: 1.4rem; text-align: center; line-height: 1.3; }
+      .heading-section .subtitle { font-size: 1.1rem; text-align: center; line-height: 1.4; }
+    }
+    
+    /* Εικόνα responsive */
+    .wrap-about img.img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+    
